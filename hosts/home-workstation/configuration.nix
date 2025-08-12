@@ -2,9 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports =
+  [ # Include the results of the hardware scan.
+    /home/janek/.dotfiles/hosts/home-workstation.nix
+    /home/janek/.dotfiles/hosts/configuration.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -14,7 +20,8 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
+  
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -54,7 +61,16 @@
     isNormalUser = true;
     description = "Janek";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      pkgs.firefox
+    ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "janek" = import ./home.nix;
+    };
   };
 
   # Allow unfree packages
@@ -67,6 +83,8 @@
   #  wget
      pkgs.git
      pkgs.kitty
+     pkgs.wofi
+     pkgs.vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
