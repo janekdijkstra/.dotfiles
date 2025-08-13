@@ -8,6 +8,7 @@
   imports =
   [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ../../modules/nixos/1password.nix
   ];
 
   # Bootloader.
@@ -84,6 +85,7 @@
      pkgs.kitty
      pkgs.wofi
      pkgs.vim
+     pkgs.vscode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

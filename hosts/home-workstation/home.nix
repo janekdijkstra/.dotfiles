@@ -2,6 +2,8 @@
 
 {
   imports = [
+    #../../modules/home-manager/zsh.nix
+    #../../modules/home-manager/vscode.nix
     ../../modules/home-manager/hyprland.nix
   ];
 
