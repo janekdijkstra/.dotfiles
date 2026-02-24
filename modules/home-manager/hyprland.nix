@@ -1,6 +1,21 @@
 { pkgs, lib, ...}:
 
 {
+  fonts.fontconfig.enable = true;
+
+  home.packages = with pkgs; [
+    fira-code
+    fira-code-symbols
+    font-awesome
+    liberation_ttf
+    mplus-outline-fonts.githubRelease
+    pkgs.nerd-fonts._0xproto
+    pkgs.nerd-fonts.droid-sans-mono
+    noto-fonts
+    noto-fonts-color-emoji
+    proggyfonts
+  ];
+
   programs.bash = {
     enable = true;
     profileExtra = ''
@@ -95,8 +110,6 @@
         };
       };
 
-      gestures.workspace_swipe = false;
-
       device = [
         {
           name = "epic-mouse-v1";
@@ -162,12 +175,6 @@
         ",XF86AudioPause, exec, playerctl play-pause"
         ",XF86AudioPlay, exec, playerctl play-pause"
         ",XF86AudioPrev, exec, playerctl previous"
-      ];
-
-      # Window rules
-      windowrule = [
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
 
       "ecosystem:no_update_news" = true;

@@ -5,6 +5,7 @@
     #../../modules/home-manager/zsh.nix
     #../../modules/home-manager/vscode.nix
     ../../modules/home-manager/hyprland.nix
+    ../../modules/home-manager/wofi.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

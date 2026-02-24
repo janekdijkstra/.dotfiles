@@ -83,9 +83,14 @@
   #  wget
      pkgs.git
      pkgs.kitty
-     pkgs.wofi
      pkgs.vim
      pkgs.vscode
+
+     kdePackages.qtsvg
+     kdePackages.kio # needed since 25.11
+    kdePackages.kio-fuse #to mount remote filesystems via FUSE
+    kdePackages.kio-extras #extra protocols support (sftp, fish and more)
+    kdePackages.dolphin # This is the actual dolphin package
   ];
 
   services.getty.autologinUser = "janek";
