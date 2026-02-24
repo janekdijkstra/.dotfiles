@@ -88,9 +88,14 @@
      pkgs.vscode
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  programs.hyprland.enable = true;
+  services.getty.autologinUser = "janek";
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+
   programs.waybar.enable = true;
  
 #   wayland.windowManager.hyprland.enable = true;
