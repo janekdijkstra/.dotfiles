@@ -24,10 +24,7 @@
       "$menu" = "wofi --show drun";
       "$mainMod" = "alt";
 
-      # Autostart
-      exec-once = [
-        "waybar"
-      ];
+
 
       # Environment variables
       env = [
