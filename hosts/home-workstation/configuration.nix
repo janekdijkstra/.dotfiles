@@ -29,6 +29,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  networking.wg-quick.interfaces.wg0.configFile = "/etc/nixos/wireguard/wg0.conf";
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
