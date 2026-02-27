@@ -3,8 +3,8 @@
   programs.wofi = {
     enable = true;
     settings = {
-      width=480;
-      height=520;
+      width="480";
+      height="520";
       location="center";
       show="drun";
       prompt="  Search...";
@@ -47,8 +47,8 @@ window {
 
 /* ── Outer box ──────────────────────────────────────────────── */
 #outer-box {
-    margin: 10px;
-    padding: 8px;
+//    margin: 10px;
+//    padding: 8px;
 }
 
 /* ── Search bar ─────────────────────────────────────────────── */

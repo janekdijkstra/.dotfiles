@@ -36,7 +36,7 @@
       # Variables
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun";
+      "$menu" = "pkill wofi || wofi";
       "$mainMod" = "alt";
 
 
