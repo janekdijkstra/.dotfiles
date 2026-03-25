@@ -87,6 +87,7 @@
      pkgs.kitty
      pkgs.vim
      pkgs.vscode
+     pkgs.freecad
 
      kdePackages.qtsvg
      kdePackages.kio # needed since 25.11
