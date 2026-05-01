@@ -22,39 +22,16 @@
       hide_scroll=true;
     };
     style = ''
-/* ============================================================
-   Wofi — Hillside Reverie Theme
-   Matches waybar palette:
-     Shadow    #1a2a20
-     Meadow    #2a4a30 / #3d6645 / #c5d9c0
-     Sky       #4a7fa5 / #6fa8cc
-     Cloud     #f0dfc0 / #e8c97a
-     Poppy     #e05c4b
-   ============================================================ */
-
-* {
-    font-family: "Noto Sans", "DejaVu Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-}
-
-/* ── Window ─────────────────────────────────────────────────── */
 window {
-    background-color: rgba(20, 36, 25, 0.96);
-    border: 1px solid rgba(197, 217, 192, 0.15);
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(0, 255, 183, 0.614);
     border-radius: 14px;
-}
-
-/* ── Outer box ──────────────────────────────────────────────── */
-#outer-box {
-//    margin: 10px;
-//    padding: 8px;
 }
 
 /* ── Search bar ─────────────────────────────────────────────── */
 #input {
-    background-color: rgba(42, 74, 48, 0.60);
-    border: 1px solid rgba(197, 217, 192, 0.18);
+    background-color: transparent;
+    border: none;
     border-radius: 10px;
     color: #f0dfc0;
     padding: 8px 14px;
@@ -63,10 +40,9 @@ window {
 }
 
 #input:focus {
-    border-color: rgba(111, 168, 204, 0.50);
-    background-color: rgba(42, 74, 48, 0.80);
-    outline: none;
+    background-color: rgba(22, 22, 22, 0.6);
 }
+
 
 /* ── Scrollbar ──────────────────────────────────────────────── */
 #scroll {
@@ -82,10 +58,10 @@ window {
 /* ── Each entry ─────────────────────────────────────────────── */
 #entry {
     background-color: transparent;
-    border-radius: 9px;
     padding: 7px 12px;
     margin: 2px 0;
-    color: #c5d9c0;
+    border: 1px solid transparent;
+    color: #dadada;
 }
 
 #entry:hover {
@@ -94,14 +70,17 @@ window {
 }
 
 #entry:selected {
-    background-color: rgba(74, 127, 165, 0.28);
-    border: 1px solid rgba(111, 168, 204, 0.35);
+    background-color: rgba(74, 165, 147, 0.28);
+    border: 1px solid rgba(0, 255, 183, 0.614);
     color: #f0dfc0;
 }
+
 
 /* ── App icon ───────────────────────────────────────────────── */
 #entry image {
     margin-right: 10px;
+    height: 10px;
+    width: 10px;
 }
 
 /* ── App name text ──────────────────────────────────────────── */
