@@ -4,6 +4,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    hyprpaper
     fira-code
     fira-code-symbols
     font-awesome
@@ -24,6 +25,20 @@
         exec start-hyprland
       fi
     '';
+  };
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      splash = false;
+
+      wallpaper = [
+        {
+          monitor = "";
+          path = "~/.dotfiles/theme/forrest.jpg";
+        }
+      ];
+    };
   };
 
   wayland.windowManager.hyprland = {
@@ -179,6 +194,7 @@
       ];
 
       exec-once = [
+        "1password --silent"
         "/home/janek/.dotfiles/theme/start.sh"
       ];
 
