@@ -14,6 +14,7 @@
     noto-fonts
     noto-fonts-color-emoji
     proggyfonts
+    quickshell
   ];
 
   programs.bash = {
@@ -175,6 +176,10 @@
         ",XF86AudioPause, exec, playerctl play-pause"
         ",XF86AudioPlay, exec, playerctl play-pause"
         ",XF86AudioPrev, exec, playerctl previous"
+      ];
+
+      exec-once = [
+        "/home/janek/.dotfiles/theme/start.sh"
       ];
 
       "ecosystem:no_update_news" = true;

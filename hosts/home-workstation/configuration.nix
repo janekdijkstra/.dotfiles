@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-
 {
   imports =
   [ # Include the results of the hardware scan.
@@ -87,7 +86,7 @@
      pkgs.kitty
      pkgs.vim
      pkgs.vscode
-     pkgs.freecad
+     freecad
 
      kdePackages.qtsvg
      kdePackages.kio # needed since 25.11

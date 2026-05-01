@@ -1,5 +1,8 @@
 ```sudo nixos-rebuild switch --flake .#homeWorkstation```
 
+# Updating
+
+```nix flake update```
 
 # Setup Steps
 
