@@ -87,6 +87,7 @@
      pkgs.vim
      pkgs.vscode
      freecad
+     unzip
 
      kdePackages.qtsvg
      kdePackages.kio # needed since 25.11
@@ -103,6 +104,8 @@
   };
 
   programs.waybar.enable = true;
+
+  programs.thunderbird.enable = true;
  
 #   wayland.windowManager.hyprland.enable = true;
   # programs.mtr.enable = true;
