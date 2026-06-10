@@ -88,6 +88,7 @@
      pkgs.vscode
      freecad
      unzip
+     pkgs.discord-ptb
 
      kdePackages.qtsvg
      kdePackages.kio # needed since 25.11
