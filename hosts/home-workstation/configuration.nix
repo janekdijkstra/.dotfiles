@@ -107,6 +107,8 @@
   programs.waybar.enable = true;
 
   programs.thunderbird.enable = true;
+
+  services.blueman.enable = true;
  
 #   wayland.windowManager.hyprland.enable = true;
   # programs.mtr.enable = true;
