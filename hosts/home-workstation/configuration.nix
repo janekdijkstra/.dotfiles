@@ -59,8 +59,11 @@
   console.keyMap = "de";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
+
   users.users.janek = {
     isNormalUser = true;
+    shell = pkgs.zsh;
     description = "Janek";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [

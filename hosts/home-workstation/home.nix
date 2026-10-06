@@ -2,7 +2,7 @@
 
 {
   imports = [
-    #../../modules/home-manager/zsh.nix
+    ../../modules/home-manager/zsh.nix
     #../../modules/home-manager/vscode.nix
     ../../modules/home-manager/hyprland.nix
     ../../modules/home-manager/wofi.nix
@@ -14,6 +14,14 @@
   # manage.
   home.username = "janek";
   home.homeDirectory = "/home/janek";
+
+  programs.kitty = {
+    enable = true;
+    settings = {
+      confirm_os_window_close = 0;
+      shell = "${pkgs.zsh}/bin/zsh";
+    };
+  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
