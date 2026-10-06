@@ -85,10 +85,11 @@
   #  wget
      pkgs.kitty
      pkgs.vim
-     pkgs.vscode
-     freecad
-     unzip
-     pkgs.discord-ptb
+      pkgs.vscode
+      pkgs.opencode
+      freecad
+      unzip
+      pkgs.discord-ptb
 
      kdePackages.qtsvg
      kdePackages.kio # needed since 25.11
