@@ -25,15 +25,6 @@ in
     quickshell
   ];
 
-  programs.bash = {
-    enable = true;
-    profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY"] && [ "$XDG_VTNR" = 1 ]; then
-        exec start-hyprland
-      fi
-    '';
-  };
-
   services.hyprpaper = {
     enable = true;
     settings = {
@@ -51,6 +42,7 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "lua";
+    systemd.enable = true;
     settings = {
       # Variables
       mainMod = { _var = "ALT"; };

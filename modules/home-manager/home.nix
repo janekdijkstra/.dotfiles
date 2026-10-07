@@ -21,7 +21,6 @@
     enable = true;
     settings = {
       confirm_os_window_close = 0;
-      shell = "${pkgs.zsh}/bin/zsh";
     };
   };
 
@@ -37,7 +36,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.kitty
     pkgs.vim
     pkgs.vscode
     pkgs.opencode
