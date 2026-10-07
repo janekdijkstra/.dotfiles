@@ -90,6 +90,9 @@
      pkgs.vim
       pkgs.vscode
       pkgs.opencode
+      jetbrains.goland
+      jetbrains.idea
+      jetbrains.webstorm
       freecad
       unzip
       pkgs.discord-ptb
