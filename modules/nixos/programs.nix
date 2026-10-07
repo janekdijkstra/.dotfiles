@@ -3,6 +3,7 @@
 {
   imports = [
     ./1password.nix
+    ./docker.nix
   ];
 
   # Allow unfree packages
