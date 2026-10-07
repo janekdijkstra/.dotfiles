@@ -7,7 +7,7 @@
   imports =
   [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../../modules/nixos/1password.nix
+    ../../modules/nixos/programs.nix
     ../../modules/nixos/foolsparadise-root.nix
   ];
 
@@ -66,54 +66,16 @@
     shell = pkgs.zsh;
     description = "Janek";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      pkgs.firefox
-    ];
   };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "janek" = import ./home.nix;
+      "janek" = import ../../modules/home-manager/home.nix;
     };
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-     pkgs.kitty
-     pkgs.vim
-      pkgs.vscode
-      pkgs.opencode
-      jetbrains.goland
-      jetbrains.idea
-      jetbrains.webstorm
-      freecad
-      unzip
-      pkgs.discord-ptb
-
-     kdePackages.qtsvg
-     kdePackages.kio # needed since 25.11
-    kdePackages.kio-fuse #to mount remote filesystems via FUSE
-    kdePackages.kio-extras #extra protocols support (sftp, fish and more)
-    kdePackages.dolphin # This is the actual dolphin package
-  ];
-
   services.getty.autologinUser = "janek";
-
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
-  programs.waybar.enable = true;
-
-  programs.thunderbird.enable = true;
 
   services.blueman.enable = true;
  

@@ -3,12 +3,14 @@
 {
   imports = [
     ../../modules/home-manager/zsh.nix
-    #../../modules/home-manager/vscode.nix
     ../../modules/home-manager/hyprland.nix
     ../../modules/home-manager/wofi.nix
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/waybar.nix
   ];
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -35,6 +37,17 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.kitty
+    pkgs.vim
+    pkgs.vscode
+    pkgs.opencode
+    pkgs.jetbrains.goland
+    pkgs.jetbrains.idea
+    pkgs.jetbrains.webstorm
+    pkgs.freecad
+    pkgs.unzip
+    pkgs.discord-ptb
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
