@@ -45,9 +45,9 @@ in
     systemd.enable = true;
     settings = {
       # Variables
-      mainMod = { _var = "ALT"; };
+      mainMod = { _var = "SUPER"; };
       terminal = { _var = "kitty"; };
-      fileManager = { _var = "dolphin"; };
+      fileManager = { _var = "nautilus"; };
       menu = { _var = "pkill wofi || wofi"; };
 
       # Monitors

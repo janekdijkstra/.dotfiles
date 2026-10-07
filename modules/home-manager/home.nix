@@ -17,6 +17,9 @@
   home.username = "janek";
   home.homeDirectory = "/home/janek";
 
+  # Automatically mount removable drives for Nautilus.
+  services.udiskie.enable = true;
+
   programs.kitty = {
     enable = true;
     settings = {
