@@ -36,6 +36,7 @@
     waybar.enable = true;
     thunderbird.enable = true;
     firefox.enable = true;
+    direnv.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
