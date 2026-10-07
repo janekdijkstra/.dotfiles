@@ -160,6 +160,7 @@ in
         (bind (lua ''mainMod .. " + M"'') "hl.dsp.exit()" null)
         (bind (lua ''mainMod .. " + V"'') ''hl.dsp.window.float({ action = "toggle" })'' null)
         (bind (lua ''mainMod .. " + D"'') "hl.dsp.exec_cmd(menu)" null)
+        (bind (lua ''mainMod .. " + O"'') ''hl.dsp.exec_cmd("1password --quick-access")'' null)
         (bind (lua ''mainMod .. " + P"'') "hl.dsp.window.pseudo()" null)
         (bind (lua ''mainMod .. " + E"'') ''hl.dsp.layout("togglesplit")'' null)
         (bind (lua ''mainMod .. " + H"'') ''hl.dsp.focus({ direction = "left" })'' null)
