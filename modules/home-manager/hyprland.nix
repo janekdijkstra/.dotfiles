@@ -10,6 +10,15 @@ in
 {
   fonts.fontconfig.enable = true;
 
+  home.pointerCursor = {
+    enable = true;
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   home.packages = with pkgs; [
     hyprpaper
     fira-code
@@ -62,12 +71,17 @@ in
 
       # Environment variables
       env = [
+        { _args = [ "XCURSOR_THEME" "Adwaita" ]; }
         { _args = [ "XCURSOR_SIZE" "24" ]; }
         { _args = [ "HYPRCURSOR_SIZE" "24" ]; }
       ];
 
       # General
       config = {
+        cursor = {
+          enable_hyprcursor = false;
+        };
+
         general = {
           gaps_in = 5;
           gaps_out = 20;

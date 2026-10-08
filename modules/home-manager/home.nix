@@ -49,6 +49,7 @@
     pkgs.unzip
     pkgs.discord-ptb
     pkgs.google-chrome
+    pkgs.spotify
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
