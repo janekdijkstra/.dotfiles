@@ -170,6 +170,7 @@ in
       # Keybinds
       bind = [
         (bind (lua ''mainMod .. " + RETURN"'') "hl.dsp.exec_cmd(terminal)" null)
+        (bind (lua ''mainMod .. " + ESCAPE"'') ''hl.dsp.exec_cmd("systemctl suspend")'' null)
         (bind (lua ''mainMod .. " + W"'') "hl.dsp.window.close()" null)
         (bind (lua ''mainMod .. " + M"'') "hl.dsp.exit()" null)
         (bind (lua ''mainMod .. " + V"'') ''hl.dsp.window.float({ action = "toggle" })'' null)
