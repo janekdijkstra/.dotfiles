@@ -3,6 +3,7 @@
 {
   programs.zsh = {
     enable = true;
+    shellAliases.ssh = "kitty +kitten ssh";
     
     oh-my-zsh = {
       enable = true;
