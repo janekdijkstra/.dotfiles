@@ -40,6 +40,8 @@
   # environment.
   home.packages = [
     pkgs.vim
+    pkgs.htop
+    pkgs.dig
     pkgs.vscode
     pkgs.opencode
     pkgs.jetbrains.goland
