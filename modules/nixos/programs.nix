@@ -47,5 +47,10 @@
     nautilus
     libheif
     libheif.out
+
+    libreoffice
+    hunspell
+    hunspellDicts.de_DE
+    hunspellDicts.en_US
   ];
 }
